@@ -1,16 +1,18 @@
 repos:
--   repo: https://github.com/pre-commit/mirrors-pre-commit
-    rev: v3.3.0
-    hooks:
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
-    -   id: check-yaml
-        args: [--allow-empty, --schema=auto]                                                                                                                                                 
-        exclude: '^$'                                                                                                                                                                        
--   repo: local                                                                                                                                                                              
-    hooks:                                                                                                                                                                                   
-    -   id: yaml-validator                                                                                                                                                                   
-        name: Validate YAML files                                                                                                                                                            
-        entry: python validate_yaml.py                                                                                                                                                       
-        language: python                                                                                                                                                                     
-        types: [yaml] 
+    - repo: https://github.com/pre-commit/mirrors-pre-commit
+      rev: v3.3.0
+      hooks:
+          - id: end-of-file-fixer
+          - id: trailing-whitespace
+          - id: check-yaml
+            args: [--allow-empty, --schema=auto]
+            exclude: "^$"
+    - repo: local
+      hooks:
+          - id: yaml-validator
+            name: Validate YAML files
+            entry: python validate_yaml.py
+            args: [--config=.yaml_config/test_config.yaml]
+            language: python
+            types: [yaml]
+            files: test.yaml
