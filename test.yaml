@@ -2,8 +2,3 @@
   error_desc: Not Found
   milestone: 2021-12-31
   guidance: "Please check your input and try again."                                                                                                                                           
-- dict_keys:
-  error_code: 404                                                                                                                                                                            
-  error_desc: Not Found                                                                                                                                                                      
-  milestone: 2021-12-31                                                                                                                                                                      
-  guidance: "Please check your input and try again." 
