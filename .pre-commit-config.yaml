@@ -1,11 +1,10 @@
 repos:
-    - repo: https://github.com/pre-commit/mirrors-pre-commit
+    - repo: https://github.com/pre-commit/pre-commit-hooks
       rev: v3.3.0
       hooks:
           - id: end-of-file-fixer
           - id: trailing-whitespace
           - id: check-yaml
-            args: [--allow-empty, --schema=auto]
             exclude: "^$"
     - repo: local
       hooks:
