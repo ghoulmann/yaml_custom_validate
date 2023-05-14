@@ -1,0 +1,27 @@
+rules:                                                                                                                                                                                       
+  error_code:                                                                                                                                                                                
+    required: true                                                                                                                                                                           
+    type: int                                                                                                                                                                                
+    regex: "^[0-9]*$"                                                                                                                                                                        
+                                                                                                                                                                                            
+  error_desc:                                                                                                                                                                                
+    required: true                                                                                                                                                                           
+    type: str                                                                                                                                                                                
+    regex: "^[a-zA-Z ]*$"                                                                                                                                                                    
+    snake_case: false                                                                                                                                                                        
+    title_case: true                                                                                                                                                                         
+                                                                                                                                                                                            
+  milestone:                                                                                                                                                                            
+    type: str                                                                                                                                                                                
+    regex: "^[0-9]{4}-[01][0-9]-[0-3][0-9]$"                                                                                                                                                 
+                                                                                                                                                                                            
+  guidance:                                                                                                                                                                  
+    type: str                                                                                                                                                                                
+    quotes: '"'                                                                                                                                                                              
+                                                                                                                                                                                            
+  dict_keys:                                                                                                                                                                                 
+    keys:                                                                                                                                                                                    
+      - error_code                                                                                                                                                                           
+      - error_desc                                                                                                                                                                           
+      - milestone                                                                                                                                                                       
+      - guidance
