@@ -15,15 +15,15 @@ def validate_key_presence(key, data, rules, line_num):
     return True
 
 
-def validate_title_case(key, data, rules, line_num):                                                                                                                                         
-    """                                                                                                                                                                                      
-    Validate that a key is in title case (first letter of each word                                                                                                                       
-    capitalized).                                                                                                                                                                            
-    """                                                                                                                                                                                      
-    if key in data and titlecase(titlecase.titlecase(data[key])) != data[key]:                                                                                                               
-        print(f"Error: Line {line_num} - '{key}' must be in title case.")                                                                                                                    
-        return False                                                                                                                                                                         
-                                                                                                                                                                                            
+def validate_title_case(key, data, rules, line_num):
+    """
+    Validate that a key is in title case (first letter of each word
+    capitalized).
+    """
+    if key in data and titlecase(titlecase.titlecase(data[key])) != data[key]:
+        print(f"Error: Line {line_num} - '{key}' must be in title case.")
+        return False
+
     return True
 
 
@@ -67,6 +67,7 @@ def validate_data_type(key, data, rules, line_num):
         return False
 
     return True
+
 
 def validate_spacing(key, data, line_num):
     """
@@ -233,20 +234,20 @@ def validate_yaml_file(file_path, config_file):
     return True
 
 
-if __name__ == "__main__":                                                                                                                                                                   
-    # Set up argparse to parse command-line arguments                                                                                                                                        
-    parser = argparse.ArgumentParser(description="Validate a YAML file")                                                                                                                     
-    parser.add_argument("yaml_file", help="Path to YAML file to validate")                                                                                                                   
-    parser.add_argument(                                                                                                                                                                     
-        "-c",                                                                                                                                                                                
-        "--config",                                                                                                                                                                          
-        default="config.yaml",                                                                                                                                                               
-        help="Path to configuration file (default: 'config.yaml')",                                                                                                                          
-    )                                                                                                                                                                                        
-                                                                                                                                                                                            
-    # Parse command-line arguments                                                                                                                                                           
-    args = parser.parse_args()                                                                                                                                                               
-                                                                                                                                                                                            
-    # Validate the YAML file                                                                                                                                                                 
-    if not validate_yaml_file(args.yaml_file, args.config):                                                                                                                                  
-        sys.exit(1)  
+if __name__ == "__main__":
+    # Set up argparse to parse command-line arguments
+    parser = argparse.ArgumentParser(description="Validate a YAML file")
+    parser.add_argument("yaml_file", help="Path to YAML file to validate")
+    parser.add_argument(
+        "-c",
+        "--config",
+        default="config.yaml",
+        help="Path to configuration file (default: 'config.yaml')",
+    )
+
+    # Parse command-line arguments
+    args = parser.parse_args()
+
+    # Validate the YAML file
+    if not validate_yaml_file(args.yaml_file, args.config):
+        sys.exit(1)
