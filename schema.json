@@ -1,0 +1,25 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}\\d{3}$"
+      },
+      "description": {
+        "type": "string",
+        "pattern": "^[A-Z][a-zA-Z ]+$",
+        "validate_title_case": {}
+      },
+      "location": {
+        "type": "string",
+        "pattern": "^[a-z_]+$"
+      }
+    },
+    "required": ["code", "description", "location"],
+    "propertyOrder": ["code", "description", "location"],
+    "additionalProperties": true,
+    "minProperties": 3
+  }
+}

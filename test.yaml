@@ -1,4 +1,9 @@
-- error_code: 404
-  error_desc: Not Found
-  milestone: 2021-12-31
-  guidance: "Please check your input and try again."                                                                                                                                           
+- code: AB000
+  description: Failed to Botch Your Operation
+  location: last_stand    
+  solution: Please check that the URL is correct and try again.   
+
+- code: AB002
+  description: The description of the Error
+  location: final_countdown
+  solution: Your request was successful.
