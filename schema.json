@@ -9,8 +9,7 @@
       },
       "description": {
         "type": "string",
-        "pattern": "^[A-Z][a-zA-Z ]+$",
-        "validate_title_case": {}
+        "titlecase": "true"
       },
       "location": {
         "type": "string",

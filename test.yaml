@@ -1,9 +1,9 @@
 - code: AB000
-  description: Failed to Botch Your Operation
-  location: last_stand    
-  solution: Please check that the URL is correct and try again.   
+  description: Failed to botch Your Operation
+  location: last_stand
+  solution: Please check that the URL is correct and try again.
 
 - code: AB002
-  description: The description of the Error
+  description: The Description of the Error
   location: final_countdown
   solution: Your request was successful.
