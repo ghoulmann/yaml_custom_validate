@@ -1,6 +1,7 @@
 import argparse
 import jsonschema
 from titlecase import titlecase
+from colorama import Fore, Style
 
 
 class TitleCaseValidator(jsonschema.validators.AbstractValidator):
@@ -39,7 +40,8 @@ def main():
     try:
         jsonschema.validate(data, schema, titlecase=True)
     except jsonschema.ValidationError as e:
-        print(f"{args.yaml_file}:{e.context['line']}:{e.context['path']}:{e.message}")
+        print(f"{Fore.RED}{args.yaml_file}:{e.context['line']}:{e.context['path']}:{e.message}{Style.RESET_ALL}")
+        exit(1)
 
 
 if __name__ == "__main__":
