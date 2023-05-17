@@ -8,12 +8,44 @@ def is_title_case(validator, value, instance, schema):
     if schema and not instance == titlecase(instance):
         yield jsonschema.ValidationError(f"{instance} is not in title case")
 
+"""
+# Create a function to check if a string is snake case
+def is_snake_case(validator, value, instance, schema):
+    if schema and not re.fullmatch(r'^[a-z0-9_]+$', instance):
+        yield jsonschema.ValidationError(f"{instance} is not in snake case")
+"""
+
+"""
+# Extend Draft7Validator with the new checks
+Draft7ValidatorWithCaseCheck = jsonschema.validators.extend(
+    Draft7Validator, validators={"titleCase": is_title_case, "snakeCase": is_snake_case}
+)
+"""
+
 # Extend Draft7Validator with the new check
 Draft7ValidatorWithCaseCheck = jsonschema.validators.extend(
     Draft7Validator, validators={"titleCase": is_title_case}
 )
 
 # Define a JSON schema for validation
+
+
+"""
+schema = {
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "titleCase": True
+        },
+        "name": {
+            "type": "string",
+            "snakeCase": True
+        }
+    },
+}
+"""
+
 schema = {
     "type": "object",
     "properties": {
