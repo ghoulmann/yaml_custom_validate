@@ -34,5 +34,4 @@ rules:
     required: only-when-needed
     quote-type: double
     allow-quoted-quotes: true
-
   trailing-spaces: enable
