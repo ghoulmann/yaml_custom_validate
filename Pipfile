@@ -6,11 +6,7 @@ name = "pypi"
 [packages]
 titlecase = "*"
 pyyaml = "*"
-"ruamel.yaml" = "*"
 yamllint = "*"
-yamale = "*"
-pykwalify = "*"
-yaspin = "*"
 jsonschema = "*"
 
 [dev-packages]

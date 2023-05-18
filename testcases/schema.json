@@ -9,7 +9,7 @@
       },
       "description": {
         "type": "string",
-        "titlecase": "true"
+        "titleCase": "true"
       },
       "location": {
         "type": "string",
