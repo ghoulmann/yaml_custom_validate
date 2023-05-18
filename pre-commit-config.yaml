@@ -10,8 +10,8 @@ repos:
       hooks:
           - id: yaml-validator
             name: Validate YAML files
-            entry: python validate_yaml.py
-            args: [--config=.yaml_config/test_config.yaml]
+            entry: python yaml_validator.py
+            args: []
             language: python
             types: [yaml]
             files: test.yaml
